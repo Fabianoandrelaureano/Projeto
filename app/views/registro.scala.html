@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Leite</title>
+		<meta charset="utf-8">
+		<link href="@routes.Assets.at("css/bootstrap.min.css")" rel="stylesheet" media="screen">
+		<link rel="stylesheet" media="screen"
+		href="@routes.Assets.at("stylesheets/main.css")">
+		
+		<script
+		src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")"
+		type="text/javascript">
+		</script>
+    </head>
+    <body>
+
+
+	
+     <ul class="nav nav-pills">
+     <div class="col-lg-4"></div>
+   <div class="col-lg-4 container form-horizontal panel panel-primary text-info">
+   @if(flash.contains("fail")) {
+   		<p class="bg-danger" style="">
+        	@flash.get("fail")
+		</p>
+   }
+
+   @helper.form(routes.Registro.registrar) {
+	   <h1 class="text-center">Registrar</h1>
+	
+	   <p>
+	       <input type="text" name="nome" placeholder="Nome" 
+                class="form-control">
+	   </p>
+	   <p>
+	       <input type="email" name="email" placeholder="Email" 
+                   class="form-control">
+	   </p>
+	   <p>
+	       <input type="password" name="pass" placeholder="Password" class="form-control" >
+	   </p>
+	   <center>
+	       <button class="btn btn-primary"  type="submit">Registrar</button><br><br>
+	   </center>
+	}
+    </div>
+    
+    </body>
+</html>

@@ -1,0 +1,30 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>CsFTravels</title>
+		<meta charset="utf-8">
+		<link href="@routes.Assets.at("css/bootstrap.min.css")" rel="stylesheet" media="screen">
+		<link rel="stylesheet" media="screen"
+		href="@routes.Assets.at("stylesheets/main.css")">
+		
+		<script
+		src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")"
+		type="text/javascript">
+		</script>
+    </head>
+    <body>
+    <br><br><br>
+    	<div class="navbar navbar-inverse navbar-fixed-top">
+		
+        <h3>
+        <span class="label label-primary">Bem Vindo(a)! @session.get("user")</span>
+        <a href="/logout" class="btn btn-primary pull-right" > LogOut</a>
+    	<a href="/minhaConta" class="btn btn-primary pull-right">Minha Conta</a>
+        </h3>
+    	</div>
+        @content
+    </body>
+</html>
