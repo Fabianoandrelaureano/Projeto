@@ -1,0 +1,35 @@
+@(idTema: Long, temas: List[Tema])
+
+@main("Home Page") {
+
+    <ul class="nav nav-pills">
+          <li class="active"><a href="/"">Home</a></li>
+    </ul>
+
+    <h4>Adiconar nova dica</h4>
+        <form method="post" action="/dicastema/@idTema"/>
+            <input name="descricao" type="text" placeholder="descrição" required/><br>
+        
+            <button type="submit" class="btn btn-success btn-medium">Add</button>
+
+        </form>
+	
+    <div class="container form-horizontal panel panel-primary text-info" >
+        
+        <center><h2><b>Dicas</b></h2></center>
+
+        @for(tema <- temas){
+            @if(tema.getId() == idTema){
+                @for(dica <- tema.getDicas()){
+
+                     <ul class="lista list-group">                               
+                        <li class="list-group-item">@dica.getDescricao()</a></li>
+                     </ul>
+
+                }
+            }
+        }        
+		
+    </div>       
+        
+}
