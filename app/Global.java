@@ -75,7 +75,7 @@ public class Global extends GlobalSettings {
 		Tema t11 = new Tema("Minitestes");
 		t11.addDica(d11);
 		
-		Dica d12 = new Dica("Aproveite os labs");
+		Dica d12 = new Dica("Aproveite os labs, para aprender as tecnologias");
 		Tema t12 = new Tema("Projeto");
 		t12.addDica(d12);
 		
