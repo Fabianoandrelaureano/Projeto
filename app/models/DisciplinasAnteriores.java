@@ -5,8 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity
-public class Dica {
+public class DisciplinasAnteriores extends DicaG {
+	
 	
 	@Id
     @GeneratedValue
@@ -15,19 +15,21 @@ public class Dica {
 	@Column
 	private String descricao;
 	
+	@Column
+	private String razao;
+	
 	private int numLikes;
 	private int numDeslikes;
 	
-	public Dica(String descricao) {
-		this.setDescricao(descricao);
-		this.numLikes = 0;
-		this.numDeslikes = 0;
+	public DisciplinasAnteriores(String descricao, String razao) {
+		super(descricao);
+		this.setRazao(razao);
 	}
 	
-	public Dica() {
+	public DisciplinasAnteriores() {
 		
 	}
-
+	
 	public String getDescricao() {
 		return descricao;
 	}
@@ -52,5 +54,12 @@ public class Dica {
 		this.numDeslikes += 1;
 	}
 
+	public String getRazao() {
+		return razao;
+	}
+
+	public void setRazao(String razao) {
+		this.razao = razao;
+	}
 
 }

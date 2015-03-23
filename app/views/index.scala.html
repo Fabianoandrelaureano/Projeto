@@ -2,19 +2,15 @@
 
 @main("Home") {
 	
-        <ul class="nav nav-pills">
-          <li class="active"><a href="/"">Home</a></li>
-        </ul>
-
-          
         <div class="container form-horizontal panel panel-primary text-info" >
         
         <center><h2><b>Temas</b></h2></center>
+        <center><h5><b>A dificuldade de cada tema varia de -2 a 2, onde -2 é muito facil e 2 é muito dificil</b></h5></center>
 
         	@for(tema <- temas){
 
         		<ul class="lista list-group">			    				
-			    	  <li class="list-group-item"><a href="@routes.Application.dicasTema(tema.getId)">@tema.getNome()</a></li>
+			    	  <li class="list-group-item"><a href="@routes.Application.dicasTema(tema.getId)">@tema.getNome(): a dificuldade desse tema é @tema.getDificuldade()</a></li>
                 </ul>
 
 		    }

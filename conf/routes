@@ -17,12 +17,7 @@ POST     /registrar                       controllers.Registro.registrar()
 # Dicas
 GET      /dicastema/:id                   controllers.Application.dicasTema(id:Long)
 POST     /dicastema/:id                   controllers.Application.addDica(id:Long)
-
-#POST    /OO                              controllers.Application.addDicaOO()
-#GET     /OO                              controllers.Application.dicasOO()
-
-#POST    /GRASP                           controllers.Application.addDicaGrasp()
-#GET     /GRASP                           controllers.Application.dicasGrasp()
+POST     /index/:id                       controllers.Application.addDificuldade(id:Long)
 
 
 # Map static resources from the /public folder to the /assets URL path

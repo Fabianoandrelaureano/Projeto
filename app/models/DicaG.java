@@ -5,8 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity
-public class Dica {
+public abstract class DicaG {
 	
 	@Id
     @GeneratedValue
@@ -18,13 +17,13 @@ public class Dica {
 	private int numLikes;
 	private int numDeslikes;
 	
-	public Dica(String descricao) {
+	public DicaG(String descricao) {
 		this.setDescricao(descricao);
 		this.numLikes = 0;
 		this.numDeslikes = 0;
 	}
 	
-	public Dica() {
+	public DicaG() {
 		
 	}
 

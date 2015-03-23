@@ -45,9 +45,36 @@ public class Global extends GlobalSettings {
 		Tema t3 = new Tema("GRASP");
 		t3.getDicas().add(d3);
 		
+		Tema t4 = new Tema("GoF");
+		
+		Tema t5 = new Tema("Arquitetura");
+		
+		Tema t6 = new Tema("Play");
+		
+		Tema t7 = new Tema("JS");
+		
+		Tema t8 = new Tema("HTML+CSS+Bootstrap");
+		
+		Tema t9 = new Tema("Heroku");
+		
+		Tema t10 = new Tema("Labs");
+		
+		Tema t11 = new Tema("Minitestes");
+		
+		Tema t12 = new Tema("Projeto");
+		
 		dao.persist(t1);
 		dao.persist(t2);
 		dao.persist(t3);
+		dao.persist(t4);
+		dao.persist(t5);
+		dao.persist(t6);
+		dao.persist(t7);
+		dao.persist(t8);
+		dao.persist(t9);
+		dao.persist(t10);
+		dao.persist(t11);
+		dao.persist(t12);
 		
 		temas.add(t1);
 		temas.add(t2);

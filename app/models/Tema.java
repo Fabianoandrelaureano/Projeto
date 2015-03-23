@@ -26,9 +26,12 @@ public class Tema {
 	@JoinColumn
 	private List<Dica> dicas;
 	
+	private String dificuldade;
+	
 	public Tema(String nome) {
 		this.setNome(nome);
 		dicas = new ArrayList<Dica>();
+		this.setDificuldade("0");
 	}
 	
 	public Tema() {
@@ -57,6 +60,14 @@ public class Tema {
 
 	public void addDica(Dica d1) {
 		dicas.add(d1);		
+	}
+	
+	public String getDificuldade() {
+		return dificuldade;
+	}
+
+	public void setDificuldade(String dificuldade) {
+		this.dificuldade = dificuldade;
 	}
 
 }
